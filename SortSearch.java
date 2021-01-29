@@ -72,9 +72,10 @@ class SortSearch {
       } else if (arr[mid] > search) {
         // If element is smaller than mid, then it can only be present in left subarray 
         return binarySearch(arr, start, mid - 1, search);
-      } 
-      // Else the element can only be present in right subarray 
-      return binarySearch(arr, mid + 1, length, search); 
+      } else {
+        // Else the element can only be present in right subarray 
+        return binarySearch(arr, mid + 1, length, search);
+      }
     } 
     return -1; // Element is not present
   }
